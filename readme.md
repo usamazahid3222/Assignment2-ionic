@@ -1,4 +1,4 @@
-### This a ionic application which displys list of games on a page and you can add or delete movies in the list.
+### This a ionic application which displys list of games on a page and you can add or delete the games in the list.
 
 <img src="1.png" width="400">
 <img src="2.png" width="400">
