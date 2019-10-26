@@ -14,7 +14,23 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  {path: 'gameslist',
+  children: [
+    {
+      path: '',
+      loadChildren:
+      './gameslist/gameslist.module#GameslistPageModule'
+    },
+    {
+      path: ':gameid',
+     loadChildren: './game/game.module#GamePageModule'
+    }
+  ]
+},
+  { path: 'addgame', loadChildren: './addgame/addgame.module#AddgamePageModule' }
+ /* { path: 'gameslist', loadChildren: './gameslist/gameslist.module#GameslistPageModule' },
+  { path: 'game', loadChildren: './game/game.module#GamePageModule' }*/
 ];
 
 @NgModule({

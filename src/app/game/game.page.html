@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="gameslist"></ion-back-button>
+
+    </ion-buttons>
+    <ion-title> GAME</ion-title>
+    <!-- (click)="deleteGame()" -->
+    <ion-button slot="end" (click)="deleteGame()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="http://www.auroracl.com/template/resources/images/imgicon.png" height="250px" />
+    
+    
+
+    <ion-card-header>
+      <ion-card-title>{{singleGame?.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{singleGame?.id}}
+
+
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

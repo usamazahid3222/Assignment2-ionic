@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Add Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid class="ion-padding-top">
+
+    <ion-text> Please fill up the information</ion-text>
+    <div [formGroup]="addgameform">
+      <ion-item>
+        <ion-label position="floating">Game Id</ion-label>
+        <ion-input formControlName="id" [(ngModel)]="inputid"></ion-input>
+      </ion-item>
+      <ion-item>
+
+        <ion-label position="floating">Game Name</ion-label>
+        <ion-input formControlName="name" [(ngModel)]="inputname"></ion-input>
+      </ion-item>
+   
+
+    <ion-grid class="ion-padding-top">
+      <ion-row class="ion-justify-content-center">
+
+        <ion-button shape="round" (click) = "addGame()" [disabled]="!addgameform.valid">Save</ion-button>
+      </ion-row>
+    </ion-grid>
+  </div>
+  </ion-grid>
+</ion-content>
